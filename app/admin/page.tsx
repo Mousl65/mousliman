@@ -2,24 +2,22 @@
 
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
-import { useRouter } from 'next/navigation'; // Pour la redirection
-import { ShieldCheck, Trash2, Loader2, Lock } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { ShieldCheck, Trash2, Loader2, LogOut} from 'lucide-react';
 
 export default function AdminPage() {
   const [messages, setMessages] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const [authorized, setAuthorized] = useState(false); // Nouvel état de sécurité
+  const [authorized, setAuthorized] = useState(false);
   const router = useRouter();
 
+  // 1. Vérification de l'authentification
   useEffect(() => {
     const checkAuth = async () => {
       const { data: { user } } = await supabase.auth.getUser();
-
       if (!user) {
-        // Si pas d'utilisateur, on redirige vers login
         router.push('/login');
       } else {
-        // Si l'utilisateur est là, on autorise l'affichage et on charge les messages
         setAuthorized(true);
         fetchMessages();
       }
@@ -27,18 +25,44 @@ export default function AdminPage() {
     checkAuth();
   }, [router]);
 
+  // 2. Fonction pour charger les messages
   const fetchMessages = async () => {
-    // ... (ton code fetchMessages actuel reste le même)
+    setLoading(true);
+    const { data, error } = await supabase
+      .from('contacts')
+      .select('*')
+      .order('created_at', { ascending: false });
+
+    if (!error) setMessages(data || []);
+    setLoading(false);
   };
 
-  // Si on n'est pas encore autorisé, on affiche un écran de chargement
+  // 3. LA FONCTION QUI MANQUAIT : handleDelete
+  const handleDelete = async (id: string) => {
+    if (confirm("Voulez-vous vraiment supprimer ce message ?")) {
+      const { error } = await supabase
+        .from('contacts')
+        .delete()
+        .eq('id', id);
+
+      if (error) {
+        alert("Erreur lors de la suppression");
+      } else {
+        // Mise à jour locale pour ne pas avoir à recharger la page
+        setMessages(messages.filter(msg => msg.id !== id));
+      }
+    }
+  };
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    router.push('/login');
+  };
+
   if (!authorized) {
     return (
       <div className="h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center">
-          <Loader2 className="animate-spin text-blue-600 mx-auto mb-4" size={40} />
-          <p className="text-gray-500 font-medium">Vérification des accès...</p>
-        </div>
+        <Loader2 className="animate-spin text-blue-600" size={40} />
       </div>
     );
   }
@@ -51,11 +75,12 @@ export default function AdminPage() {
             <ShieldCheck className="text-blue-600" /> Panneau Admin
           </h1>
           <button 
-            onClick={fetchMessages}
-            className="text-sm bg-white border px-4 py-2 rounded-lg hover:bg-gray-50 transition-all"
-          >
-            Actualiser
-          </button>
+  type="button" // <--- N'oublie pas celui-là aussi !
+  onClick={handleLogout}
+  className="flex items-center gap-2 text-sm bg-red-50 text-red-600 px-4 py-2 rounded-lg hover:bg-red-100 transition-all"
+>
+  <LogOut size={18} /> Déconnexion
+</button>
         </div>
 
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
@@ -75,39 +100,36 @@ export default function AdminPage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
-                  {messages.length > 0 ? (
-                    messages.map((msg) => (
-                      <tr key={msg.id} className="hover:bg-blue-50/30 transition-colors group">
-                        <td className="px-6 py-4 text-sm text-gray-500">
-                          {new Date(msg.created_at).toLocaleDateString('fr-FR')}
-                        </td>
-                        <td className="px-6 py-4">
-                          <div className="font-medium text-gray-900">{msg.name}</div>
-                          <div className="text-xs text-gray-400">{msg.email}</div>
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-600">
-                          <p className="font-semibold text-gray-800 mb-1">{msg.subject}</p>
-                          <p className="line-clamp-2">{msg.message}</p>
-                        </td>
-                        <td className="px-6 py-4 text-right">
-                          <button 
-                            onClick={() => handleDelete(msg.id)}
-                            className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all"
-                            title="Supprimer"
-                          >
-                            <Trash2 size={18} />
-                          </button>
-                        </td>
-                      </tr>
-                    ))
-                  ) : (
-                    <tr>
-                      <td colSpan={4} className="px-6 py-20 text-center text-gray-400">
-                        Aucun message dans la base.
-                      </td>
-                    </tr>
-                  )}
-                </tbody>
+  {messages.length > 0 ? (
+    messages.map((msg) => (
+      <tr key={msg.id} className="hover:bg-gray-50 transition-colors">
+        <td className="px-6 py-4 text-sm text-gray-500">
+          {new Date(msg.created_at).toLocaleDateString('fr-FR')}
+        </td>
+        <td className="px-6 py-4 font-medium text-gray-900">
+          {msg.name}
+        </td>
+        <td className="px-6 py-4 text-sm text-gray-600">
+          {msg.message}
+        </td>
+        <td className="px-6 py-4 text-right">
+         <button 
+  type="button" // <--- Ajoute cette ligne
+  onClick={() => handleDelete(msg.id)}
+  className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all"
+  title="Supprimer"
+>
+  <Trash2 size={18} />
+</button>
+        </td>
+      </tr>
+    ))
+  ) : (
+    <tr>
+      <td colSpan={4} className="text-center py-10 text-gray-400">Aucun message.</td>
+    </tr>
+  )}
+</tbody>
               </table>
             </div>
           )}
