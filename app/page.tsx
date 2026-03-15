@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Globe, Zap, Shield } from 'lucide-react';
 import Image from 'next/image';
+import FadeIn from './components/FadeIn';
 
 export default function HomePage() {
   return (
     <main className="bg-white">
       {/* --- SECTION HERO (L'ACCROCHE) --- */}
+    <FadeIn delay={0.1}>
       <section className="relative pt-20 pb-32 overflow-hidden">
         {/* Décoration d'arrière-plan (Cercles flous) */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
@@ -25,10 +27,10 @@ export default function HomePage() {
 <div className="flex justify-center mb-8">
   <div className="p-4  bg-white rounded-3xl shadow-xl border border-gray-100 animate-bounce-slow">
     <Image 
-      src="/logo2.jpg" 
+      src="/image1.jpg" 
       alt="Logo Société" 
-      width={1200} 
-      height={80}
+      width={600} 
+      height={40}
       className="rounded-2xl  object-cover w-200 "
      
     />
@@ -56,14 +58,15 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
+</FadeIn>
       {/* --- SECTION FEATURES (NOS FORCES) --- */}
       <section className="py-23 bg-green-200 mt--90">
+      <FadeIn> 
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">?لمادا الانخراط معنا </h2>
           </div>
-
+  
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-align-center ">
             <FeatureCard 
               icon={<Zap className="text-yellow-500" />} 
@@ -82,9 +85,11 @@ export default function HomePage() {
             />
           </div>
         </div>
+        </FadeIn>
       </section>
 
       {/* --- SECTION REASSURANCE --- */}
+      <FadeIn delay={0.2}> 
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-4 bg-blue-600 rounded-[3rem] p-12 text-center text-white relative overflow-hidden shadow-2xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">ننتظر اقتراحاتكم و انتقاداتكم للجمعية   </h2>
@@ -94,6 +99,7 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+      </FadeIn>
     </main>
   );
 }

@@ -64,6 +64,9 @@ export default function Navbar() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <Link href="/contact" className="text-gray-600 hover:text-blue-600 px-3 py-2 text-2xl font-bold">التواصل</Link>
+              <Link href="/projects" className="text-gray-600 hover:text-blue-600 px-3 py-2 text-2xl font-bold">
+  البرامج
+</Link>
               <Link href="/about" className="text-gray-600 hover:text-blue-600 px-3 py-2 text-2xl font-bold">من نحن</Link>
               <Link href="/" className="text-gray-600 hover:text-blue-600 px-3 py-2 text-2xl font-bold">استقبال</Link>
               
@@ -105,15 +108,16 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white border-b border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link href="/" onClick={() => setIsOpen(false)} className="block px-3 py-4 text-gray-600">Accueil</Link>
+            <Link href="/" onClick={() => setIsOpen(false)} className="block px-3 py-4 text-gray-600">استقبال</Link>
             <Link 
         href="/about" 
         onClick={() => setIsOpen(false)} 
         className="block px-3 py-4 text-gray-600 hover:bg-gray-50 rounded-lg"
       >
-        À propos
+        من نحن
       </Link>
-            <Link href="/contact" onClick={() => setIsOpen(false)} className="block px-3 py-4 text-gray-600">Contact</Link>
+            <Link href="/contact" onClick={() => setIsOpen(false)} className="block px-3 py-4 text-gray-600">التواصل</Link>
+             <Link href="/project" onClick={() => setIsOpen(false)} className="block px-3 py-4 text-gray-600">البرامج</Link>
             
             {user ? (
               <>
