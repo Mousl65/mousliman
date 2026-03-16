@@ -24,14 +24,14 @@ export default function HomePage() {
                  <h1 className='text-4xl font-bold'>جمعية سند بالقنيطرة ترحب بكم </h1>  
           </div>
           
-<div className="flex justify-center mb-8">
-  <div className="p-4  bg-white rounded-3xl shadow-xl border border-gray-100 animate-bounce-slow">
+<div className="flex justify-center mb-10 ">
+  <div className="relative p-2 bg-white rounded-2xl shadow-lg border border-gray-100 hover:scale-120 transition-transform duration-300">
     <Image 
-      src="/image1.jpg" 
+      src="/image1.png" 
       alt="Logo Société" 
-      width={600} 
-      height={40}
-      className="rounded-2xl  object-cover w-200 "
+      width={400} 
+      height={60}
+      className="rounded-2xl  object-cover   "
      
     />
   </div>
