@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Globe, Zap, Shield } from 'lucide-react';
-import Image from 'next/image';
+import image from 'next/image';
 import FadeIn from './components/FadeIn';
 
 export default function HomePage() {
@@ -26,7 +26,7 @@ export default function HomePage() {
           
 <div className="flex justify-center mb-10 ">
   <div className="relative p-2 bg-white rounded-2xl shadow-lg border border-gray-100 hover:scale-120 transition-transform duration-300">
-    <Image 
+    <img
       src="/image.png" 
       alt="Logo Société" 
       width={400} 
