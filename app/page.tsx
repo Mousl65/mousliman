@@ -27,7 +27,7 @@ export default function HomePage() {
 <div className="flex justify-center mb-10 ">
   <div className="relative p-2 bg-white rounded-2xl shadow-lg border border-gray-100 hover:scale-120 transition-transform duration-300">
     <Image 
-      src="/image1.png" 
+      src="/image.png" 
       alt="Logo Société" 
       width={400} 
       height={60}
