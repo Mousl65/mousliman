@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  trailingSlash: false, // Force la suppression du slash final
 };
 
 export default nextConfig;

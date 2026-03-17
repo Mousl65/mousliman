@@ -9,7 +9,7 @@ export default function ProjectsPage() {
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const { data } = await supabase.from('projects').select('*').order('created_at', { ascending: false });
+      const { data } = await supabase.from('projects').select('*').order('created_at', { descending: false });
       if (data) setProjects(data);
     };
     fetchProjects();

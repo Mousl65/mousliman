@@ -38,13 +38,13 @@ export default function HomePage() {
 </div>
 
           <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight">
-            لنتحد جميعا لفعل الخير <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500">
+            لنتحد جميعا لفعل الخير <br /> <br />
+            <span className=" bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500">
               و التضامن و التكافل
             </span>
           </h1>
           
-          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-2xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed font-bold">
             هدفنا مساعدة اسر المنخرطين عند الوفاة او المرض بالاضافة الى خلق انشطة ثقافية و ترفيهية لفائدتهم
           </p>
 
@@ -60,11 +60,12 @@ export default function HomePage() {
       </section>
 </FadeIn>
       {/* --- SECTION FEATURES (NOS FORCES) --- */}
+      
       <section className="py-23 bg-green-200 mt--90">
-      <FadeIn> 
+       <FadeIn delay={0.2}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">?لمادا الانخراط معنا </h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">?لمادا الانخراط معنا </h2>
           </div>
   
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-align-center ">
@@ -85,11 +86,11 @@ export default function HomePage() {
             />
           </div>
         </div>
-        </FadeIn>
+       </FadeIn>
       </section>
-
+       
       {/* --- SECTION REASSURANCE --- */}
-      <FadeIn delay={0.2}> 
+      <FadeIn delay={0.4}> 
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-4 bg-blue-600 rounded-[3rem] p-12 text-center text-white relative overflow-hidden shadow-2xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">ننتظر اقتراحاتكم و انتقاداتكم للجمعية   </h2>
