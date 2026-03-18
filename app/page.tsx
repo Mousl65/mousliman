@@ -7,8 +7,9 @@ export default function HomePage() {
   return (
     <main className="bg-white">
       {/* --- SECTION HERO (L'ACCROCHE) --- */}
-    <FadeIn delay={0.1}>
+    
       <section className="relative pt-20 pb-32 overflow-hidden">
+        
         {/* Décoration d'arrière-plan (Cercles flous) */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
           <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-50 rounded-full blur-[120px]" />
@@ -16,10 +17,12 @@ export default function HomePage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 text-center">
+           
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-medium mb-6 animate-fade-in">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-6 w-70 rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-6 bg-blue-600"></span>
+               
             </span>
                  <h1 className='text-4xl font-bold'>جمعية سند بالقنيطرة ترحب بكم </h1>  
           </div>
@@ -57,8 +60,9 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+        
       </section>
-</FadeIn>
+
       {/* --- SECTION FEATURES (NOS FORCES) --- */}
       
       <section className="py-23 bg-green-200 mt--90">
