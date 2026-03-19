@@ -14,7 +14,7 @@ export default function ContactPage() {
   const formData = new FormData(e.target as HTMLFormElement);
   const data = {
     name: formData.get('name'),
-    email: formData.get('email'),
+    email: formData.get('Email'),
     subject: formData.get('subject'),
     message: formData.get('message'),
   };
@@ -36,68 +36,68 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           
           {/* --- COLONNE GAUCHE : INFOS --- */}
-          <div className="space-y-8">
+          <div className="bg-green-50 p-8 rounded-3xl border border-gray-400 shadow-sm">
             <div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">Contactez-nous</h1>
-              <p className="text-lg text-gray-600">
-                Une question ? Un projet en tête ? N'hésitez pas à nous laisser un message, 
-                notre équipe vous répondra sous 24h.
+              <h1 className="text-4xl text-center font-bold text-gray-900 mb-4">تواصلوا معنا</h1>
+              <p className="text-lg text-right text-gray-600">
+                لطرح افكاركم و مقترحاتكم أو الاستفسار في بعض المواضيع سنجيبكم في أسرع وقت 
               </p>
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center shrink-0">
+               
+              <div className="flex flex-row-reverse gap-2 "> 
+                <div className="w-12 h-12  bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center shrink-0">
                   <Mail size={24} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Email</h3>
-                  <p className="text-gray-500">contact@mousliman.com</p>
+                  <h3 className="font-semibold text-gray-900">البريد الإلكتروني</h3>
+                  <p className="text-gray-500">contact@sand.com</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center shrink-0">
+              <div className="flex flex-row-reverse gap-2">
+                <div className="w-12 h-12  bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center shrink-0">
                   <Phone size={24} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Téléphone</h3>
-                  <p className="text-gray-500">+33 1 23 45 67 89</p>
+                  <h3 className="font-semibold text-gray-900">الهاتف</h3>
+                  <p className="text-gray-500">+112 0 00 00 00 00</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center shrink-0">
+              <div className="flex flex-row-reverse gap-2">
+                <div className="w-12 h-12  bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center shrink-0">
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Bureau</h3>
-                  <p className="text-gray-500">123 Rue de la Tech, 75000 Paris</p>
+                  <h3 className="font-semibold text-gray-900">المكتب</h3>
+                  <p className="text-gray-500">العنوان زنقة القنيطرةرقم 2</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* --- COLONNE DROITE : FORMULAIRE --- */}
-          <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm">
+          <div className="bg-green-50 p-8 rounded-3xl border border-gray-400 shadow-sm">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Nom</label>
+                  <label className="block text-right font-bold text-gray-900 mb-2">الإسم و النسب</label>
                   <input 
                    name="name"
                     type="text" 
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
-                    placeholder="Votre nom"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                    placeholder="الإسم و النسب"
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                  <label className="block text-right font-bold text-gray-900 mb-2">البريد الإلكتروني</label>
                   <input 
                   name="email"
                     type="email" 
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                     placeholder="email@exemple.com"
                     required
                   />
@@ -105,23 +105,23 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Sujet</label>
+                <label className="block text-right font-bold text-gray-900 mb-2">الموضوع</label>
                 <input 
                 name="subject"
                   type="text" 
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
-                  placeholder="Comment pouvons-nous vous aider ?"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                  placeholder=" ?طرح اي موضوع للنقاش او للإستفسار"
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                <label className="block text-right font-bold text-gray-900 mb-2">المراسلة</label>
                 <textarea 
                  name="message"
                   rows={4}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none"
-                  placeholder="Votre message ici..."
+                  className="w-full px-4 py-3 rounded-xl border border-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none"
+                  placeholder="محتوى المراسلة هنا  "
                   required
                 ></textarea>
               </div>
@@ -130,7 +130,7 @@ export default function ContactPage() {
                 type="submit"
                 className="w-full py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
               >
-                Envoyer le message <Send size={18} />
+                للإرسال اضغط هنا <Send size={18} />
               </button>
 
               {status && (

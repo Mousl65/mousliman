@@ -7,7 +7,7 @@ export default function AboutPage() {
       
       {/* --- SECTION EN-TÊTE --- */}
       
-      <section className="bg-blue-600 py-20 px-4 text-white mt-4">
+      <section className="bg-blue-600 py-20 px-4 text-white m-4  rounded-[3rem] overflow-hidden shadow-2xl ">
       <FadeIn> 
 
         <div className="max-w-7xl mx-auto text-center">
@@ -23,7 +23,8 @@ export default function AboutPage() {
       <FadeIn delay={0.2}> 
 
       <section className="py-20 px-5 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 gap-6 md:grid-cols-2 gap-2">
+        <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row gap-8">
+          
           <div className="max-w-4xl mx-auto px-4 order-2  bg-blue-700 rounded-[3rem] p-12 text-center text-white relative overflow-hidden shadow-2xl">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">أهداف جمعية سند </h2>
             <p className="text-white text-2xl leading-relaxed">
@@ -46,13 +47,15 @@ export default function AboutPage() {
               </li>
             </ul>
           </div>
-           </div>
-          
+           
+          </div>
           {/* Image de remplacement / Placeholder stylisé */}
-          <div className="bg-green-300 w-100 rounded-3xl h-80 flex items-center justify-center border-2 border-dashed border-red-200">
+           
+          <div className="bg-green-300 w-100 rounded-3xl h-60 m-4 flex items-center justify-center border-2 border-dashed border-red-200">
             <p className="text-red-600 font-medium uppercase tracking-widest text-2xl">جميعا من اجل تحقيق الأهداف</p>
           </div>
         </div>
+       
       </section>
    </FadeIn>
       {/* --- SECTION VALEURS --- */}
