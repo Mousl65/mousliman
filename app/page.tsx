@@ -43,7 +43,7 @@ export default function HomePage() {
           <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight">
             لنتحد جميعا لفعل الخير <br /> <br />
             <span className=" bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500">
-              و التضامن و التكافل
+             ودلك بالإنخراط بجمعية سند
             </span>
           </h1>
           
