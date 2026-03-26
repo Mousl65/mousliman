@@ -1,13 +1,20 @@
 import Link from 'next/link';
+import { Facebook, Instagram, Linkedin, Github, Mail } from 'lucide-react';
+
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const socialLinks = [
+    { name: 'Facebook', href: 'https://facebook.com/ton-profil', icon: <Facebook size={20} />, color: 'hover:text-blue-600' },
+    { name: 'Instagram', href: 'https://instagram.com/ton-profil', icon: <Instagram size={20} />, color: 'hover:text-pink-600' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/in/ton-profil', icon: <Linkedin size={20} />, color: 'hover:text-blue-700' },
+    { name: 'GitHub', href: 'https://github.com/ton-username', icon: <Github size={20} />, color: 'hover:text-gray-900' },
+  ];
 
   return (
-    <footer className="bg-white border-t border-gray-200 pt-12 pb-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          
+   <footer className="bg-white border-t border-gray-100 py-12">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Section 1: Branding */}
           <div className="space-y-4">
             <Link href="/" className="text-xl font-bold text-blue-600">
@@ -36,6 +43,22 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Liens Réseaux Sociaux */}
+          <div className="flex gap-6">
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-gray-800 transition-colors duration-300 ${social.color}`}
+                aria-label={social.name}
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
+
           {/* Section 3: Légal */}
           <div>
             <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
@@ -58,6 +81,8 @@ export default function Footer() {
             © {currentYear} Association SANAD. Tous droits réservés.
           </p>
         </div>
+
+       
       </div>
     </footer>
   );

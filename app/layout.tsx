@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/Navbar';
+import WhatsAppButton from './components/WhatsAppButton';
 import Footer from './components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,6 +28,9 @@ export default function RootLayout({
         </main>
 
         <Footer />
+
+        {/* Le bouton WhatsApp apparaîtra par-dessus tout le contenu */}
+        <WhatsAppButton />
       </body>
     </html>
   );
