@@ -1,32 +1,67 @@
+"use client";
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Globe, Zap, Shield } from 'lucide-react';
 import image from 'next/image';
 import FadeIn from './components/FadeIn';
+import { motion } from "framer-motion";
 
 export default function HomePage() {
-  return (
-    <main className="bg-white">
-      {/* --- SECTION HERO (L'ACCROCHE) --- */}
-    
-      <section className="relative pt-20 pb-32 overflow-hidden">
-        
-        {/* Décoration d'arrière-plan (Cercles flous) */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-50 rounded-full blur-[120px]" />
-          <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-indigo-50 rounded-full blur-[100px]" />
-        </div>
 
-        <div className="max-w-7xl mx-auto px-4 text-center">
-           
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-medium mb-6 animate-fade-in">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-6 w-70 rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-6 bg-blue-600"></span>
-               
-            </span>
-                 <h1 className='text-4xl font-bold'>جمعية سند بالقنيطرة ترحب بكم </h1>  
-          </div>
-          
+  // 1. Décomposition de la phrase en mots
+  const sentence = "جمعية سند بالقنيطرة ترحب بكم";
+  const words = sentence.split(" ");
+
+  // 2. Variantes pour le conteneur (gère le délai entre les mots)
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.25, // Délai entre l'apparition de chaque mot
+        delayChildren: 0.5,     // Délai avant le début de l'animation
+      },
+    },
+  };
+
+  // 3. Variantes pour chaque mot (l'animation elle-même)
+  const wordVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 20, // Part d'un peu plus bas
+    },
+    visible: { 
+      opacity: 1, 
+      y: 0, // Arrive à sa position finale
+      transition: {
+        type: "spring", // Effet de ressort pour plus de fluidité
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+  };
+  return (
+    
+      <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-gray-50">
+      
+      {/* --- LE GRAND TITRE ANIMÉ --- */}
+      <motion.h1
+        className="text-4xl md:text-6xl font-extrabold text-gray-900 text-center leading-tight tracking-tight flex flex-wrap justify-center gap-x-4 gap-y-2"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        dir="rtl" // Assure la direction de droite à gauche
+      >
+        {words.map((word, index) => (
+          <motion.span
+            key={index}
+            variants={wordVariants}
+            className="inline-block" // Important pour l'animation 'y'
+          >
+            {word}
+          </motion.span>
+        ))}
+      </motion.h1>
+      {/* ----------------------------- */}          
 <div className="flex justify-center mb-10 ">
   <div className="relative p-2 bg-white rounded-2xl shadow-lg border border-gray-100 hover:scale-120 transition-transform duration-300">
     <img
@@ -59,9 +94,9 @@ export default function HomePage() {
               للمزيد من الايضاحات
             </Link>
           </div>
-        </div>
         
-      </section>
+        
+     
 
       {/* --- SECTION FEATURES (NOS FORCES) --- */}
       
