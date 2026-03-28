@@ -41,14 +41,14 @@ export default function HomePage() {
 </div>
 
           <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight">
-            لنتحد جميعا لفعل الخير <br /> <br />
+لنتحد جميعا و نعمل بروح الفريق الواحد<br /> <br />
             <span className=" bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500">
              ودلك بالإنخراط بجمعية سند
             </span>
           </h1>
           
           <p className="text-2xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed font-bold">
-            هدفنا مساعدة اسر المنخرطين عند الوفاة او المرض بالاضافة الى خلق انشطة ثقافية و ترفيهية لفائدتهم
+            هدفنا مساندة منخرطينا و أسرهم عند الوفاة و مساعدة الفئات المعوزة و الهشة من أهلنا بالاضافة الى خلق انشطة ثقافية و ترفيهية لفائدتهم
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

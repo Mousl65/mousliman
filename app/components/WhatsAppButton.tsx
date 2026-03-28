@@ -1,28 +1,30 @@
 "use client";
-import { MessageCircle } from 'lucide-react';
+import { Users } from 'lucide-react';
 
-export default function WhatsAppButton() {
-  // Remplace par ton vrai numéro (format international sans le +)
-  const phoneNumber = "212661899492"; 
-  const message = "Bonjour ! Je suis intéressé par vos services.";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+export default function WhatsAppGroupButton() {
+  const groupLink = "https://chat.whatsapp.com/TON_CODE_DE_GROUPE"; 
 
   return (
     <a
-      href={whatsappUrl}
+      href={groupLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 flex items-center justify-center group"
-      aria-label="Contactez-nous sur WhatsApp"
+      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all duration-300 flex flex-row-reverse items-center justify-center group"
+      aria-label="Rejoindre notre groupe"
     >
-      {/* Petit texte qui apparaît au survol sur PC */}
-      <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-500 ease-in-out whitespace-nowrap text-sm font-medium">
-        Discuter avec nous
+      {/* Texte en Arabe qui apparaît au survol */}
+      <span 
+        dir="rtl" 
+        className="max-w-0 overflow-hidden group-hover:max-w-[200px] group-hover:mr-3 transition-all duration-500 ease-in-out whitespace-nowrap text-sm font-bold"
+      >
+        إلتحق بنا في جمعية سند
       </span>
-      <MessageCircle size={28} fill="currentColor" />
+
+      {/* Icône du groupe */}
+      <Users size={28} />
       
-      {/* Notification "ping" animée pour attirer l'œil */}
-      <span className="absolute top-0 right-0 flex h-3 w-3">
+      {/* Petit point de notification animé */}
+      <span className="absolute top-0 left-0 flex h-3 w-3">
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
         <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
       </span>

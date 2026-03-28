@@ -13,7 +13,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">لماذا تأسست جمعية سند</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-          تأسست جمعية سند بتاريخ 23 دجنبر 2024 ودلك برغبة من مجموعة من الافراد لتقديم مجموعة من الخدمات الانسانية لأفراد المجتمع بالقنيطرةو خاصة الفئة المعوزة منهم 
+          تأسست جمعية سند بتاريخ 23 دجنبر 2024 ودلك برغبة من مجموعة من الافراد لتقديم مجموعة من الخدمات الانسانية لأفراد المجتمع بالقنيطرة و خاصة الفئة المعوزة منهم 
           </p>
         </div>
         </FadeIn>
@@ -34,7 +34,7 @@ export default function AboutPage() {
          <div dir="rtl" className="text-right  p-6">   
            <ul className="list-disc list-inside space-y-2">
               <li className="flex items-center gap-3 text-white font-medium">
-                <CheckCircle2 className="text-yellow-200" size={26} /> - مساعدة أسر المنخرطين عند الوفاة سواء ماديا أو معنوياو التكفل بجميع الإجراءات الإدارية 
+                <CheckCircle2 className="text-yellow-200" size={26} /> - مساعدة أسر المنخرطين عند الوفاة سواء ماديا أو معنويا و التكفل بجميع الإجراءات الإدارية 
               </li>
               <li className="flex items-center gap-3 text-white font-medium">
                 <CheckCircle2 className="text-yellow-200" size={26} />  ـ تقديم يد المساعدة للمنخرطين في وضعية صعبة عند مرضهم أو مرض أحد افراد عائلتهم
@@ -43,7 +43,7 @@ export default function AboutPage() {
                 <CheckCircle2 className="text-yellow-200" size={26} />    ـ خلق أنشطة ثقافية و ترفيهية لفائدة المنخرطين 
               </li>
               <li className=" flex items-center gap-4  text-white font-medium">
-                <CheckCircle2 className="text-yellow-200" size={26} />    ـ عقد شراكات مع الأطباءو الصيادلة و المختبرات الطبية لإستفادة المنخرطين و دويهم من امتيارات 
+                <CheckCircle2 className="text-yellow-200" size={26} />    ـ عقد شراكات مع الأطباء و الصيادلة و المختبرات الطبية لإستفادة المنخرطين و ذويهم من امتيارات 
               </li>
             </ul>
           </div>
@@ -91,7 +91,7 @@ export default function AboutPage() {
                 <Award size={28} />
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-900">النوعية</h3>
-              <p className="text-gray-500">نختار بدقة نوعية نوعية البرامج و الأنشطة  التي تصب في صالح المنخرطين</p>
+              <p className="text-gray-500">نختار بدقة نوعية البرامج و الأنشطة  التي تصب في صالح المنخرطين</p>
               
             </div>
         
