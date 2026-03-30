@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle, Globe, Zap, Shield } from 'lucide-react';
 import image from 'next/image';
 import FadeIn from './components/FadeIn';
-import { motion } from "framer-motion";
+
+import { motion, Variants } from "framer-motion"; // Ajoute Variants ici
 
 export default function HomePage() {
 
@@ -12,33 +13,33 @@ export default function HomePage() {
   const words = sentence.split(" ");
 
   // 2. Variantes pour le conteneur (gère le délai entre les mots)
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.25, // Délai entre l'apparition de chaque mot
-        delayChildren: 0.5,     // Délai avant le début de l'animation
-      },
+  const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.25,
+      delayChildren: 0.5,
     },
-  };
+  },
+};
 
   // 3. Variantes pour chaque mot (l'animation elle-même)
-  const wordVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 20, // Part d'un peu plus bas
+  const wordVariants: Variants = {
+  hidden: { 
+    opacity: 0, 
+    y: 20, 
+  },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: {
+      type: "spring", // Maintenant TypeScript sait que c'est le BON "spring"
+      damping: 12,
+      stiffness: 100,
     },
-    visible: { 
-      opacity: 1, 
-      y: 0, // Arrive à sa position finale
-      transition: {
-        type: "spring", // Effet de ressort pour plus de fluidité
-        damping: 12,
-        stiffness: 100,
-      },
-    },
-  };
+  },
+};
   return (
     
       <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-gray-50">
