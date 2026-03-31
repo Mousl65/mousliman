@@ -8,13 +8,14 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
+
   setStatus("Envoi en cours...");
 
   // Récupération des données du formulaire (via FormData ou State)
   const formData = new FormData(e.target as HTMLFormElement);
   const data = {
     name: formData.get('name'),
-    email: formData.get('Email'),
+    email: formData.get('email'),
     subject: formData.get('subject'),
     message: formData.get('message'),
   };
