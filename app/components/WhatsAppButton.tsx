@@ -2,7 +2,7 @@
 import { Users } from 'lucide-react';
 
 export default function WhatsAppGroupButton() {
-  const groupLink = "https://chat.whatsapp.com/TON_CODE_DE_GROUPE"; 
+  const groupLink = " https://chat.whatsapp.com/B9IDsTrkPDgH6ehsZx7gTF?mode=gi_t"; 
 
   return (
     <a
