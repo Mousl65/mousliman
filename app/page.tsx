@@ -63,16 +63,16 @@ export default function HomePage() {
         ))}
       </motion.h1>
       {/* ----------------------------- */}          
-<div className="flex justify-center mb-10 ">
-  <div className="relative p-2 bg-white rounded-2xl shadow-lg border border-gray-100 hover:scale-120 transition-transform duration-300">
+<div className="w-full mb-10 overflow-hidden">
+  <div className="relative w-full h-[300px] md:h-[500px] group">
     <img
-      src="/image.png" 
-      alt="Logo Société" 
-      width={400} 
-      height={60}
-      className="rounded-2xl  object-cover   "
-     
+      src="/image3.png" 
+      alt="Actualité Association Sanad" 
+      className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
     />
+    
+    {/* Overlay optionnel pour faire ressortir le texte si tu en ajoutes par-dessus */}
+    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
   </div>
 </div>
 
