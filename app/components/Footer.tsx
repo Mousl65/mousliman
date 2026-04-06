@@ -5,7 +5,7 @@ import { Facebook, Instagram, Linkedin, Github, Mail } from 'lucide-react';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const socialLinks = [
-    { name: 'Facebook', href: 'https://facebook.com/ton-profil', icon: <Facebook size={20} />, color: 'hover:text-blue-600' },
+    { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61582523024369&locale=fr_FR', icon: <Facebook size={20} />, color: 'hover:text-blue-600' },
     { name: 'Instagram', href: 'https://instagram.com/ton-profil', icon: <Instagram size={20} />, color: 'hover:text-pink-600' },
     { name: 'LinkedIn', href: 'https://linkedin.com/in/ton-profil', icon: <Linkedin size={20} />, color: 'hover:text-blue-700' },
     { name: 'GitHub', href: 'https://github.com/ton-username', icon: <Github size={20} />, color: 'hover:text-gray-900' },

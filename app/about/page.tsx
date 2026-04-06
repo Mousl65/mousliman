@@ -40,7 +40,7 @@ export default function AboutPage() {
                 <CheckCircle2 className="text-yellow-200" size={26} />  ـ تقديم يد المساعدة للمنخرطين في وضعية صعبة عند مرضهم أو مرض أحد افراد عائلتهم
               </li>
               <li className=" flex items-center gap-4  text-white font-medium">
-                <CheckCircle2 className="text-yellow-200" size={26} />    ـ خلق أنشطة ثقافية و ترفيهية لفائدة المنخرطين 
+                <CheckCircle2 className="text-yellow-200" size={26} />         ـ خلق أنشطة ثقافية و ترفيهية لفائدة المنخرطين : رحلات استكشافية داخل المدينة أو خارجها, محاضرات و ندوات توعوية 
               </li>
               <li className=" flex items-center gap-4  text-white font-medium">
                 <CheckCircle2 className="text-yellow-200" size={26} />    ـ عقد شراكات مع الأطباء و الصيادلة و المختبرات الطبية لإستفادة المنخرطين و ذويهم من امتيارات 
