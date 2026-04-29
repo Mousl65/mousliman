@@ -63,10 +63,10 @@ export default function HomePage() {
         ))}
       </motion.h1>
       {/* ----------------------------- */}          
-<div className="w-full mb-10 overflow-hidden">
+<div className="w-full mt-10 mb-10 overflow-hidden">
   <div className="relative w-full h-[300px] md:h-[500px] group">
     <img
-      src="/image3.png" 
+      src="/reunion.png" 
       alt="Actualité Association Sanad" 
       className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
     />
@@ -75,7 +75,7 @@ export default function HomePage() {
     <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
   </div>
 </div>
-
+       <h1 className="text-5xl md:text-7xl text-center font-extrabold text-gray-900 mb-6 tracking-tight">الجمع العام السنوي للجمعية بتاريخ 26 أبريل 2026</h1>
           <h1 className="text-5xl md:text-7xl text-center font-extrabold text-gray-900 mb-6 tracking-tight">
 لنتحد جميعا و نعمل بروح الفريق الواحد<br /> <br />
             <span className=" bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500">
@@ -87,11 +87,11 @@ export default function HomePage() {
             هدفنا مساندة منخرطينا و أسرهم عند الوفاة و مساعدة الفئات المعوزة و الهشة من أهلنا بالاضافة الى خلق انشطة ثقافية و ترفيهية لفائدتهم
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4  justify-center">
             <Link href="/contact" className="px-8 py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200 transition-all flex items-center justify-center gap-2">
               للتواصل معنا <ArrowRight size={20} />
             </Link>
-            <Link href="/about" className="px-8 py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200 transition-all flex items-center justify-center gap-2">
+            <Link href="/about" className="px-8 py-4  bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200 transition-all flex items-center justify-center gap-2">
               للمزيد من الايضاحات
             </Link>
           </div>
@@ -101,9 +101,9 @@ export default function HomePage() {
 
       {/* --- SECTION FEATURES (NOS FORCES) --- */}
       
-      <section className="py-23 bg-green-200 mt--90">
+      <section className="py-23 bg-green-200 mt-10 ">
        <FadeIn delay={0.2}>
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 ">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">?لمادا الانخراط معنا </h2>
           </div>
