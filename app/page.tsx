@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Globe, Zap, Shield } from 'lucide-react';
+import { ArrowRight, Globe, Zap, Shield } from 'lucide-react';
 import image from 'next/image';
 import FadeIn from './components/FadeIn';
 
@@ -75,8 +75,8 @@ export default function HomePage() {
     <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
   </div>
 </div>
-       <h1 className="text-5xl md:text-7xl text-center font-extrabold text-gray-900 mb-6 tracking-tight">الجمع العام السنوي للجمعية بتاريخ 26 أبريل 2026</h1>
-          <h1 className="text-5xl md:text-7xl text-center font-extrabold text-gray-900 mb-6 tracking-tight">
+       <h1 className="text-5xl md:text-5xl text-center font-extrabold text-gray-900 mb-6 tracking-tight">الجمع العام السنوي للجمعية بتاريخ 26 أبريل 2026</h1>
+          <h1 className="text-4xl md:text-5xl text-center font-extrabold text-gray-900 mb-6 tracking-tight">
 لنتحد جميعا و نعمل بروح الفريق الواحد<br /> <br />
             <span className=" bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500">
              ودلك بالإنخراط بجمعية سند
