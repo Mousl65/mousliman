@@ -94,6 +94,9 @@ export default function HomePage() {
             <Link href="/about" className="px-8 py-4  bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200 transition-all flex items-center justify-center gap-2">
               للمزيد من الايضاحات
             </Link>
+             <Link href="/projects" className="px-8 py-4  bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200 transition-all flex items-center justify-center gap-2">
+              البرامج و الأنشطة
+            </Link>
           </div>
         
         
