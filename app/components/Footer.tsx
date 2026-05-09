@@ -38,6 +38,9 @@ export default function Footer() {
                 <Link href="/about" className="text-gray-500 hover:text-blue-600 text-sm transition-colors">من نحن</Link>
               </li>
               <li>
+                <Link href="/projects" className="text-gray-500 hover:text-blue-600 text-sm transition-colors">البرامج</Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-gray-500 hover:text-blue-600 text-sm transition-colors">التواصل</Link>
               </li>
             </ul>

@@ -13,7 +13,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">لماذا تأسست جمعية سند</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-          تأسست جمعية سند بتاريخ 23 دجنبر 2024 ودلك برغبة من مجموعة من الافراد لتقديم مجموعة من الخدمات الانسانية لأفراد المجتمع بالقنيطرة و خاصة الفئة المعوزة منهم 
+          تأسست جمعية سند بتاريخ 21 دجنبر 2024 ودلك برغبة من مجموعة من الافراد لتقديم مجموعة من الخدمات الانسانية لأفراد المجتمع بالقنيطرة و خاصة الفئة المعوزة منهم 
           </p>
         </div>
         </FadeIn>
@@ -82,7 +82,7 @@ export default function AboutPage() {
                 <Users size={28} />
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-900">العمل الجماعي</h3>
-              <p className="text-gray-500">المشاركة الجماعية في اتخاد القرارات و و اشراك جميع المنخرطين في االمواضيع الهاة و الحاسمة</p>
+              <p className="text-gray-500">المشاركة الجماعية في اتخاد القرارات و و اشراك جميع المنخرطين في إتخاد القرارات  الهامة و الحاسمة</p>
             </div>
      
             <div className="bg-white p-8 rounded-2xl shadow-sm text-center hover:scale-120 transition-transform duration-300">

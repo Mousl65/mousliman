@@ -79,7 +79,7 @@ export default function HomePage() {
           <h1 className="text-4xl md:text-5xl text-center font-extrabold text-gray-900 mb-6 tracking-tight">
 لنتحد جميعا و نعمل بروح الفريق الواحد<br /> <br />
             <span className=" bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500">
-             ودلك بالإنخراط بجمعية سند
+             وذلك بالإنخراط بجمعية سند
             </span>
           </h1>
           
@@ -115,7 +115,7 @@ export default function HomePage() {
             <FeatureCard 
               icon={<Zap className="text-yellow-500" />} 
               title="التنسيق و الاستشارة بين اعضاء المكتب " 
-              desc="اتخاد القرارات بالاجماع و استشارة المنخرطين عند القرارات المصيرية للجمعية"
+              desc="اتخاد القرارات بالاجماع و استشارة المنخرطين عندما يتعلق الأمر بالقرارات المصيرية للجمعية"
             />
             <FeatureCard 
               icon={<Shield className="text-green-500" />} 
