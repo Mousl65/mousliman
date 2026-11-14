@@ -66,7 +66,7 @@ export default function HomePage() {
 <div className="w-full mt-10 mb-10 overflow-hidden">
   <div className="relative w-full h-[300px] md:h-[500px] group">
     <img
-      src="/reunion.png" 
+      src="/sanad1.jpg" 
       alt="Actualité Association Sanad" 
       className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
     />
@@ -75,7 +75,7 @@ export default function HomePage() {
     <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
   </div>
 </div>
-       <h1 className="text-5xl md:text-5xl text-center font-extrabold text-gray-900 mb-6 tracking-tight">الجمع العام السنوي للجمعية بتاريخ 26 أبريل 2026</h1>
+       <h1 className="text-5xl md:text-5xl text-center font-extrabold text-gray-900 mb-6 tracking-tight">حفل توزيع الجوائز على الناجحات و الناجحين في البكالوريا 2026</h1>
           <h1 className="text-4xl md:text-5xl text-center font-extrabold text-gray-900 mb-6 tracking-tight">
 لنتحد جميعا و نعمل بروح الفريق الواحد<br /> <br />
             <span className=" bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500">
